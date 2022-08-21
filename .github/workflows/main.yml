@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
           
       - name: Validate JSON
-        uses: OrRosenblatt/validate-json-action@0.1.0
+        uses: docker://orrosenblatt/validate-json-action:latest
         with:
           schema: ./schema.json
           json: ./news-and-media.json
