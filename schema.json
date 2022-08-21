@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "article": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "required": ["date", "image", "headline", "article", "link"]
+}
