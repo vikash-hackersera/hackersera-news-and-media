@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Validate JSON
-        uses: OrRosenblatt/validate-json-action@0.1.0
+        uses: OrRosenblatt/validate-json-action@latest
         env:
           INPUT_SCHEMA: ./schema.json
           INPUT_JSONS: ./news-and-media.json
