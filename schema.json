@@ -1,15 +1,22 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
-  "items": [
-    {
+  "items": {
+    "$ref": "#/definitions/Welcome7Element"
+  },
+  "definitions": {
+    "Welcome7Element": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "date": {
           "type": "string"
         },
         "image": {
-          "type": "string"
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".jpeg", ".jpg", ".png", ".webp"]
         },
         "headline": {
           "type": "string"
@@ -18,11 +25,14 @@
           "type": "string"
         },
         "link": {
-          "type": "string"
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html"]
         }
       },
-      "additionalProperties": false,
-      "required": ["date", "image", "headline", "article", "link"]
+      "required": ["article", "date", "headline", "image", "link"],
+      "title": "Welcome7Element"
     }
-  ]
+  }
 }
